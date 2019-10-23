@@ -211,6 +211,6 @@ files:
 
 Use the command `eb status` to get info about the application URL by the attribute `CNAME`.
 
-By the way, my app has been published and can be accessed by this [link](http://shopping-spot-app.cmhr9pnrbz.us-west-1.elasticbeanstalk.com).
+By the way, the application has been published and can be accessed by this [link](http://shopping-spot-app.ahr2feuunq.us-west-1.elasticbeanstalk.com).
 
 :warning: Please advise when finishing the test so I can destroy it. :warning:
