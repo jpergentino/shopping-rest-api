@@ -12,11 +12,6 @@ public class RecordExistsException extends Exception {
 		this.entity = entity;
 	}
 	
-	public RecordExistsException(Entity entity, String message) {
-		super(message);
-		this.entity = entity;
-	}
-	
 	public Entity getEntity() {
 		return this.entity;
 	}
