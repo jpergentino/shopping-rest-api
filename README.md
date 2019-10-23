@@ -87,11 +87,11 @@ docker run -p 8080:8080 shopping
 
 ## 3. Testing the application
 
-:mega: The [MongoDB Embedded](https://www.mongodb.com) are being used in this project. The database data is created and can be observed in class `com.store.shopping.config.MongoDBInit.java`;
+:mega: The [MongoDB Embedded](https://www.mongodb.com) is being used in this project. The database data is created and can be observed in class `com.store.shopping.config.MongoDBInit.java`;
 
 :mega: The database environment is created in memory and is deleted when the application is finished.
 
-You can test using **Automated Tests** or **Docker**, as follows:
+You can test using **Automated Tests** or running the Application (**Item 2**), as follows:
 
 ### 3.1 Automated Tests
 A set of JUnit tests was developed and can be running using Maven in folder `ROOT_FOLDER` by the following command:
@@ -103,7 +103,7 @@ mvn clean test
 ### OR
 
 ### 3.2 Using [Postman](https://www.getpostman.com) or Browser
-The APi mapping can be accessed by using the following URLs:
+Considering that the application is __up and running__, the APi mapping can be accessed by using the following URLs:
 
 ```
 http://localhost:8080/user
@@ -119,14 +119,14 @@ According to RESTful patterns/conventions, the APIs are composed by the followin
 - GET in /entity/{id}: Recover the entity with specific id.
 - DELETE in /entity/id: Remove the entity with specific id.
 
-:bulb: Using the 'GET in /entity' to recover a list of entities is the best way to know the entity JSON structure/attributes. 
+:bulb: Using the 'GET in /entity' to recover a list of entities is the best way to get the entity JSON structure/attributes. 
 
 
 ### OR
 
 ### 3.3 Code Coverage result :gift:
 
-An additional code coverage was developed. The results are available after tests in folder `ROOT_FOLDER/target/site/jacoco/index.html`.
+An additional code coverage was developed. The results are available after tests in folder `ROOT_FOLDER/target/site/jacoco/index.html` after running the following command:
 
 ```console
 mvn clean test
