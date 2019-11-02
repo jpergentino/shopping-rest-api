@@ -17,6 +17,11 @@ import com.store.shopping.service.CartService;
 import com.store.shopping.service.ItemService;
 import com.store.shopping.service.UserService;
 
+/**
+ * A class for creating the database environment.
+ * 
+ * @author pergentino
+ */
 @Configuration
 public class MongoDBInit {
 	
@@ -32,6 +37,9 @@ public class MongoDBInit {
 	private CartService cartService;
 	
 	
+	/**
+	 * Create init data.
+	 */
 	@PostConstruct
 	public void createData() throws Throwable {
 		log.info("Creating users on database...");
@@ -51,6 +59,9 @@ public class MongoDBInit {
 		cartService.save(new Cart(userService.findAll().get(0), itemService.findAll().stream().filter(x -> x.getValue() < 1500.00).peek(i -> i.setQuantity(randomQuantity())).collect(Collectors.toList())));
 	}
 	
+	/**
+	 * @return a random int value.
+	 */
 	private int randomQuantity() {
 		return new Random().nextInt(10) + 1;
 	}

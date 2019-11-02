@@ -8,8 +8,19 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.store.shopping.model.Cart;
 
+/**
+ * A repository {@link Cart} interface.
+ * 
+ * @author pergentino
+ */
 @Repository
 @Transactional
 public interface CartRepository extends MongoRepository<Cart, String> {
+
+	/**
+	 * Find all {@link Cart} ordered by total value in an ascending mode.
+	 * 
+	 * @return a list of {@link Cart}.
+	 */
 	public List<Cart> findByOrderByTotalAsc();
 }

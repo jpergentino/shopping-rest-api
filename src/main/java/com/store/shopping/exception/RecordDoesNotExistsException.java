@@ -1,5 +1,11 @@
 package com.store.shopping.exception;
 
+/**
+ * Exception class to represents a non-existing data.
+ * 
+ * @author pergentino
+ *
+ */
 public class RecordDoesNotExistsException extends Exception {
 
 	private static final long serialVersionUID = -42692770690584645L;

@@ -9,6 +9,14 @@ import com.store.shopping.exception.RecordDoesNotExistsException;
 import com.store.shopping.exception.RecordExistsException;
 import com.store.shopping.model.Entity;
 
+/**
+ * The CRUD abstract service layer abstract class with implemented CRUD methods
+ * to be reusable by other entities service's. 
+ * 
+ * @author pergentino
+ *
+ * @param <J> the {@link Entity}.
+ */
 @SuppressWarnings({"unchecked", "rawtypes"})
 public abstract class CRUDServiceImpl<J extends Entity> implements CRUDService<J> {
 	

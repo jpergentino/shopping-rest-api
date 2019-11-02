@@ -10,6 +10,12 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 
 import cz.jirutka.spring.embedmongo.EmbeddedMongoFactoryBean;
 
+/**
+ * A class to configure MongoDB access over {@link MongoTemplate}.
+ *  
+ * @author pergentino
+ *
+ */
 @Configuration
 public class MongoDBConfig {
 	
@@ -18,6 +24,12 @@ public class MongoDBConfig {
 	private static final String MONGODB_URL = "localhost";
 	private static final String MONGODB_DATABASE_NAME = "embeded_db";
 	
+    /**
+     * Create a {@link MongoTemplate} Spring bean.
+     * 
+     * @return a {@link MongoTemplate} Spring bean
+     * @throws IOException if an error occur.
+     */
     @SuppressWarnings("deprecation")
 	@Bean
     public MongoTemplate mongoTemplate() throws IOException {

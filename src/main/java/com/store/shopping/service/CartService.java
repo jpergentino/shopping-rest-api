@@ -13,6 +13,11 @@ import com.store.shopping.model.Cart;
 import com.store.shopping.model.Item;
 import com.store.shopping.repository.CartRepository;
 
+/**
+ * The service layer that represents the {@link Cart} entity. 
+ * 
+ * @author pergentino
+ */
 @Service
 public class CartService extends CRUDServiceImpl<Cart> implements CRUDService<Cart> {
 	
